@@ -6,10 +6,9 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductComponent } from './product/product.component';
-import { HomeComponent } from './home/home.component';
+
  
 export const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
   { path: 'login', component:LoginComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'product', component: ProductComponent, canActivate : [AuthGuardGuard] ,

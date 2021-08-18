@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { FirebaseService } from './services/firebase.service';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -34,12 +33,11 @@ import { AuthGuardGuard } from './Guard/auth-guard.guard';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
-import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-
     HomeComponent,
     TopBarComponent,
     HeaderComponent,
@@ -54,7 +52,7 @@ import { HomeComponent } from './home/home.component';
     GalleryComponent,
     OutletsComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
     LoginComponent,
     RegisterComponent,
     ProductComponent,
