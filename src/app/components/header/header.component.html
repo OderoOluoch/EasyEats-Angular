@@ -16,6 +16,13 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a routerLink="cart" class="book-a-table-btn scrollto d-none d-lg-flex">Make an Order </a> 
+      <a routerLink="cart" class="book-a-table-btn scrollto d-none d-lg-flex">Make an Order 
+
+        <span style="padding-left:5px;">
+          <i style="font-size: 30px;" class="fa fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </span>
+      </a> 
+      
     </div>
   </header>
