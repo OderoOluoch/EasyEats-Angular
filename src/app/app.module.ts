@@ -14,6 +14,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { OutletsComponent } from './components/outlets/outlets.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
