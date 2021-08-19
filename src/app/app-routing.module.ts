@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { OutletContext, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { OutletsComponent } from './components/outlets/outlets.component';
 import { UsComponent } from './components/us/us.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
@@ -14,9 +16,9 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'gallery',component:GalleryComponent},
   {path:'us',component:UsComponent},
-  {path:'',component:HomeComponent},
-  {path:'',component:HomeComponent},
-  {path:'',component:HomeComponent},
+  {path:'menu',component:MenuComponent},
+  {path:'outlets',component:OutletsComponent},
+  {path:'gallery',component:GalleryComponent},
   {path:'',component:HomeComponent}
 ];
 
