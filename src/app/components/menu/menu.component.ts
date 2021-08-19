@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +12,10 @@ export class MenuComponent implements OnInit {
  menus:any;
  shops:any;
 
-  constructor(private apiservice:ApiService) { }
+  constructor(
+    private apiservice:ApiService,
+    private cartService:CartService
+    ) { }
 
   ngOnInit(): void {
     this.apiservice.apiCallCusines().subscribe((response: any) => {
@@ -27,6 +31,11 @@ export class MenuComponent implements OnInit {
     this.apiservice.apiCallShops().subscribe((response: any) => {
       this.shops = response;
     });
+  }
+
+  addtoCart(item:any){
+    this.cartService.addToCart(item);
+
   }
 
 }
