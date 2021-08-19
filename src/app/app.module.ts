@@ -15,6 +15,7 @@ import { OutletsComponent } from './components/outlets/outlets.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     OutletsComponent,
     WelcomeComponent,
-    TopBarComponent
+    TopBarComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
