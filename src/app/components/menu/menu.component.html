@@ -8,7 +8,7 @@
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="menu-flters" *ngFor="let shop of shops">
-            <li (click)="getMenuForShop(shop.id)"data-filter=".filter-starters">{{shop.name}}</li>
+            <li (click)="getMenuForShop(shop.id)"data-filter=".filter-starters" style="font-weight:900; font-style:italic; font-size:20px;" >{{shop.name}}</li>
           </ul>
         </div>
       </div>
@@ -16,7 +16,7 @@
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="menu-flters" *ngFor="let menu of shopMenus">
-            <li (click)="getCuisineForMenu(menu.id)" data-filter=".filter-starters">{{menu.name}} </li>
+            <li (click)="getCuisineForMenu(menu.id)" data-filter=".filter-starters" style="font-family: Courier; text-decoration: solid; font-size: large;">{{menu.name}} </li>
           </ul>
         </div>
       </div>
