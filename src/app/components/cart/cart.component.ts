@@ -11,6 +11,8 @@ export class CartComponent implements OnInit {
   public products : any = [];
   public grandTotal :number = 0;
   public orders:any;
+  public tables:any;
+  public waiters:any;
 
   constructor(
     private cartService:CartService,
@@ -25,8 +27,16 @@ export class CartComponent implements OnInit {
     })
 
     this.apiService.apiCallOrderTypes().subscribe((response: any) => {
-      console.log(response + "Response")
       this.orders = response;
+    });
+
+    this.apiService.apiCallTables().subscribe((response: any) => {
+      this.tables = response;
+    });
+
+    this.apiService.apiCallWaiters().subscribe((response: any) => {
+      this.waiters = response;
+      console.log(this.waiters + "waiters")
     });
 
 

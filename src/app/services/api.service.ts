@@ -18,6 +18,14 @@ export class ApiService {
     return this.http.get(this.BASE_URL +'/api/v1/order_types');
   }
 
+  apiCallTables() {
+    return this.http.get(this.BASE_URL +'/api/v1/tables');
+  }
+
+  apiCallWaiters() {
+    return this.http.get(this.BASE_URL +'/api/v1/waiters');
+  }
+
   apiCallMenuForShop(id:number) {
     return this.http.get(this.BASE_URL +'/api/v1/shops/'+id+'/menus ');
   }

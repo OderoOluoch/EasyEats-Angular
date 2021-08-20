@@ -6,24 +6,15 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Order No</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    #
-                                </div>
-                            </div>
-                            <input name="OrderNo"    type="text" class="form-control" readonly>
-                        </div>
-                      
+                        <label>Serving Waiter</label> 
+                        <select name="Pmethod"  type="text" class="form-control">
+                            <option *ngFor="let waiter of waiters" value="">-{{waiter.name}}</option>
+                        </select> 
                     </div>
                     <div class="form-group">
                         <label>Select Table</label>
                         <select name="Pmethod"  type="text" class="form-control">
-                            <option value="">-select</option>
-                            <option value="">-Cash</option>
-                            <option value="">-M-pesa</option>
-                            <option value="">-Visa Card</option>
+                            <option *ngFor="let table of tables" value="">-{{table.name}}</option>
                         </select>
                     </div>
                 </div>
@@ -31,7 +22,6 @@
                     <div class="form-group">
                         <label>Payment Method</label>
                         <select name="Pmethod"  type="text" class="form-control">
-                            <option value="">-select</option>
                             <option value="">-Cash</option>
                             <option value="">-M-pesa</option>
                             <option value="">-Visa Card</option>
