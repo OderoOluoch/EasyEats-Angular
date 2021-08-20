@@ -8,20 +8,28 @@
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="menu-flters" *ngFor="let shop of shops">
-            <li data-filter=".filter-starters">{{shop.name}}</li>
+            <li (click)="getMenuForShop(shop.id)"data-filter=".filter-starters">{{shop.name}}</li>
           </ul>
         </div>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="menu-flters" *ngFor="let menu of menus">
-            <li data-filter=".filter-starters">{{menu.name}}</li>
+          <ul id="menu-flters" *ngFor="let menu of shopMenus">
+            <li (click)="getCuisineForMenu(menu.id)" data-filter=".filter-starters">{{menu.name}} </li>
           </ul>
         </div>
       </div>
 
-      <div class="col-lg-6 menu-item filter-starters" *ngFor="let cuisine of cuisines">
+      <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="menu-flters" *ngFor="let menu of menus">
+            <li data-filter=".filter-starters">{{menu.name}}</li>
+          </ul>
+        </div>
+      </div> -->
+
+      <div class="col-lg-6 menu-item filter-starters" *ngFor="let cuisine of cuisineMenus">
         <img src="{{cuisine.image}}" style="align-items: center; width: 150px; height: 100px;" alt="">
         <div class="menu-content">
           <a href="#">{{cuisine.food}}</a><span>{{cuisine.price}}</span>

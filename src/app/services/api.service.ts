@@ -15,6 +15,15 @@ export class ApiService {
   }
 
 
+  apiCallMenuForShop(id:number) {
+    return this.http.get(this.BASE_URL +'/api/v1/shops/'+id+'/menus ');
+  }
+
+  apiCallCusisnesForMenu(id:number) {
+    return this.http.get(this.BASE_URL +'/api/v1/menus/'+id+'/cuisines ');
+  }
+
+
   apiCallMenus() {
     return this.http.get(this.BASE_URL +'/api/v1/menus');
   }
@@ -22,6 +31,8 @@ export class ApiService {
   apiCallCusines() {
     return this.http.get(this.BASE_URL +'/api/v1/cuisines');
   }
+
+
 
 
 }
