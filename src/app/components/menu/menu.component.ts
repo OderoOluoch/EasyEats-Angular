@@ -9,6 +9,8 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class MenuComponent implements OnInit {
  cuisines:any;
+ shopMenus:any;
+ cuisineMenus:any;
  menus:any;
  shops:any;
 
@@ -30,6 +32,20 @@ export class MenuComponent implements OnInit {
 
     this.apiservice.apiCallShops().subscribe((response: any) => {
       this.shops = response;
+    });
+  }
+
+
+  getMenuForShop(id:number){
+    this.apiservice.apiCallMenuForShop(id).subscribe((response: any) => {
+      this.shopMenus = response;
+     
+    });
+  }
+
+  getCuisineForMenu(id:number){
+    this.apiservice.apiCallCusisnesForMenu(id).subscribe((response: any) => {
+      this.cuisineMenus = response;
     });
   }
 
