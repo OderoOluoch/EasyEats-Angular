@@ -14,6 +14,9 @@ export class ApiService {
     return this.http.get(this.BASE_URL +'/api/v1/shops');
   }
 
+  apiCallOrderTypes() {
+    return this.http.get(this.BASE_URL +'/api/v1/order_types');
+  }
 
   apiCallMenuForShop(id:number) {
     return this.http.get(this.BASE_URL +'/api/v1/shops/'+id+'/menus ');

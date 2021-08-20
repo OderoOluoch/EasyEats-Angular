@@ -2,7 +2,7 @@
 
 <ng-container *ngIf="products.length !=0">
     <div class="container" style="padding-top: 5%;">
-        <form style="padding-top: 5%;">
+        <form style="padding-top: 5%; margin: 5%;">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -18,9 +18,12 @@
                       
                     </div>
                     <div class="form-group">
-                        <label>Customer</label>
-                        <select name="CustomerId"   type="text" class="form-control">
-                            <option value="0">-select</option>
+                        <label>Select Table</label>
+                        <select name="Pmethod"  type="text" class="form-control">
+                            <option value="">-select</option>
+                            <option value="">-Cash</option>
+                            <option value="">-M-pesa</option>
+                            <option value="">-Visa Card</option>
                         </select>
                     </div>
                 </div>
@@ -36,57 +39,17 @@
                     </div>
                    
                     <div class="form-group">
-                        <label>Grand Total</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    Ksh
-                                </div>
-                            </div>
-                            <input name="GTotal"  type="text" class="form-control" readonly>
-                        </div>
+                        <label>Order Type</label>
+                        <select name="Pmethod"  type="text" class="form-control">
+                            <option *ngFor="let order  of orders" value="">-{{order.name}}</option>
+                        
+                        </select>
                         
                     </div>
                 </div>
-            </div>
-            <!-- Order Items Table -->
-            <!-- <table class="table table-borderless">
-                <thead class="thead-light">
-                    <th>Food Item</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                    <th>
-                        <a  class="btn btn sm btn-success text-white" >
-                            <i class="fa fa-plus"></i>Add Food Item
-                        </a>
-                    </th>
-                </thead>
-                <tbody>
-        
-                    <tr>
-                        <td class="font-italic text-center" colspan="5">
-                            No selectins made for this order Yet.
-                        </td>
-                    </tr>
-        
-                    <tr >
-                        
-                        <td>
-                            <a href="" class="btn btn sm btn-info text-white">
-                                <i class="fa fa-pencil"></i>Edit
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table> -->
-        
-        
-            <div class="form-group">
-                <button type="submit" class="btn btn-dark">Submit</button>
-            </div>
+            </div>        
         </form>
-     <div class="card-table">
+     <div class="card-table" style="margin: 5%;">
          <div class="cart-product">
              <table class="table table-responsive">
                  <thead>
