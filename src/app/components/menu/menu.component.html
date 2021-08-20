@@ -29,13 +29,17 @@
         </div>
       </div> -->
 
-      <div class="col-lg-6 menu-item filter-starters" *ngFor="let cuisine of cuisineMenus">
-        <img src="{{cuisine.image}}" style="align-items: center; width: 150px; height: 100px;" alt="">
-        <div class="menu-content">
-          <a href="#">{{cuisine.food}}</a><span>{{cuisine.price}}</span>
+      <div class="col-lg-8 menu-item filter-starters" *ngFor="let cuisine of cuisineMenus">
+        <div class="menu" style="display: flex;">
+          <div>
+                    <img src="{{cuisine.image}}" style="align-items: center; width: 150px; height: 100px;" alt="">
+          </div>
+          <div style="display:inline; padding-top: 2%;">
+            <button class="book-a-table-btn scrollto d-none d-lg-flex" style="color:black;" (click)="addtoCart(cuisine)">Order This</button>
+          </div>
         </div>
-        <div class="menu-ingredients">
-          <button class="book-a-table-btn scrollto d-none d-lg-flex" (click)="addtoCart(cuisine)">Order This</button>
+        <div class="menu-content" style="left: 12%; margin-bottom: -5%; padding-bottom: 12%;">
+          <a href="#">{{cuisine.food}}</a><span>{{cuisine.price}}</span>
         </div>
       </div>
 
